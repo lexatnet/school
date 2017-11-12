@@ -1,3 +1,4 @@
+#
 def itemOutput(item):
 	color = 0;
 	dimentions = 1;
@@ -9,13 +10,13 @@ def itemOutput(item):
 		)
 	)
 
-def printBucket(bucketO, bucketName):
-	if (len(bucketO) == 0):
+def printBucket(bucket, bucketName):
+	if (len(bucket) == 0): # проверяем пустая ли корзина
 		print('{} is empty'.format(bucketName))
 		return
 	print('In {}'.format(bucketName))
-	for i in range(0, len(bucketO)):
-		itemOutput(bucketO[i])
+	for i in range(0, len(bucket)):
+		itemOutput(bucket[i])
 	message = 'end of bucket {}'.format(bucketName)
 	print(message)
 	
