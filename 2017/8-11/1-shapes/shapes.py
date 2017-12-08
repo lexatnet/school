@@ -1,14 +1,16 @@
-#
+# научимся писать и использовать функции для наших нужд
+# Для этого разработаем программу которая будет сортировать шары из одной корзины по нескольким различным в соответствии с какими либо критериями
+
+
 def itemOutput(item):
-	color = 0;
+        color = 0;
 	dimentions = 1;
 	weight = 2;
 	print('shape color={} dimentions={} weight={}'.format(
-		item[color],
+                item[color],
 		item[dimentions],
 		item[weight]
-		)
-	)
+        ))
 
 def printBucket(bucket, bucketName):
 	if (len(bucket) == 0): # проверяем пустая ли корзина
@@ -19,7 +21,9 @@ def printBucket(bucket, bucketName):
 		itemOutput(bucket[i])
 	message = 'end of bucket {}'.format(bucketName)
 	print(message)
-	
+
+
+
 def analyseBucket(bucket, redBucket, blueBucket):
 	for i in range(0, len(bucket)):
 		item = bucket[i];
