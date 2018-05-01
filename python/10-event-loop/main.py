@@ -1,5 +1,4 @@
-# в питоне есть инстументы для работы 
-
+# в питоне есть инстументы для асинхронного програмирования.
 
 from asyncio import new_event_loop
 import random
@@ -17,9 +16,5 @@ def make_loop(loopName, loop):
     return talk
 
 loop.call_later(2, make_loop('loop1', loop))
-
-loop.run_forever()
-
-loop.call_later(2, make_loop('loop2', loop2))
 
 loop.run_forever()
