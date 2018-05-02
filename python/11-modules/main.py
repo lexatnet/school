@@ -18,6 +18,16 @@
 
 from module1 import some1, func1, func2
 
+from module1.func3 import func3
+
+import module2
+
+# импортировав функции их можно исползовать 
 some1()
 func1()
 func2()
+func3()
+module2.func4()
+module2.func5()
+module2.submodule2.func6()
+module2.submodule2.func7()

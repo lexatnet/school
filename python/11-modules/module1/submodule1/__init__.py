@@ -1,3 +1,5 @@
+print('i\'m __init__.py of submodule1')
+
 import os
 file_path = os.path.realpath(__file__)
 dir_path = os.path.dirname(file_path)

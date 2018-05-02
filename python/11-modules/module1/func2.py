@@ -1,2 +1,2 @@
 def func2():
-    print('zzzzzzzzzz')
+    print('i\'m func2()')

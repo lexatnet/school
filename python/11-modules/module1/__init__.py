@@ -1,5 +1,6 @@
 # При импорте модуля выполняется код находящийся в файле __init__.py
-
+# например вызов следующей функции выполнится
+print('i\'m __init__.py of module1')
 
 # В питоне 3й версии директории модуля не используются для поиска модулей
 # но их можно добавить в путь для поиска модулей
@@ -12,5 +13,5 @@ dir_path = os.path.dirname(file_path)
 import sys
 sys.path.append(dir_path)
 
-from mo2 import some1, func1
+from submodule1 import some1, func1
 from func2 import func2
