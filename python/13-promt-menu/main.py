@@ -1,16 +1,24 @@
+from prompt_toolkit.shortcuts.utils import clear
 from shapeslib import analyseBucket, getNewBucketItems, printBucket, loadBucketFromFile, saveBucketItems
 
-bucket = loadBucketFromFile('shapes.data')
+from prompt_toolkit.shortcuts.dialogs import input_dialog
+
+shapes_db_name = input_dialog(
+        title='Open DB',
+        text='Please enter shapes DB name:')
+
+bucket = loadBucketFromFile(shapes_db_name)
 newItems = getNewBucketItems()
 
 bucket = bucket + newItems
 
-saveBucketItems('shapes.data', newItems)
+saveBucketItems(shapes_db_name, newItems)
 
 redBucket = []
 blueBucket = []
 
 analyseBucket(bucket, redBucket, blueBucket)
+
 
 printBucket(bucket, 'Origin')
 printBucket(redBucket, 'Red')
