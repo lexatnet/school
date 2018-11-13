@@ -34,12 +34,30 @@ t2.backward(50)
 
 # ознакомися с концепцией событийного програмирования
 
-def tt(th):
+def tf(th):
     def f():
         th.forward(10)
     return f
 
-screen.onkey(tt(t), 'Up')
-screen.onkey(tt(t2), 'Down')
+def tb(th):
+    def f():
+        th.backward(10)
+    return f
+
+def tr(th):
+    def f():
+        th.right(10)
+    return f
+
+def tl(th):
+    def f():
+        th.left(10)
+    return f
+
+
+screen.onkey(tf(t), 'Up')
+screen.onkey(tl(t), 'Left')
+screen.onkey(tr(t), 'Right')
+screen.onkey(tb(t), 'Down')
 screen.listen()
 input()

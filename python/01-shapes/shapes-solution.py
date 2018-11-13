@@ -64,7 +64,7 @@ for i in range(0, len(bucket)):
                 continue
         if (
                 (((item[color] == 'red') and (item[dimentions] > 4) and (item[weight] < 2))) # * красные, больше 4м в диаметре, меньше 2кг
-                or (((item[color] == 'green') and (item[dimentions] > 2) and (item[weight] < 3) and (item[weight] > 1))) #* красные, больше 4м в диаметре, меньше 2кг
+                or (((item[color] == 'green') and (item[dimentions] > 2) and (item[weight] < 3) and (item[weight] > 1))) # * красные, больше 4м в диаметре, меньше 2кг
         ): # в случае когда нам важно чтобы выполнялись 2 условия
                 bucket2.append(item)
                 continue
