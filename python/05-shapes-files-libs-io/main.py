@@ -1,4 +1,4 @@
-from shapeslib import analyseBucket, getNewBucketItems, printBucket, loadBucketFromFile, saveBucketItems
+from lib import analyseBucket, getNewBucketItems, printBucket, loadBucketFromFile, saveBucketItems
 
 bucket = loadBucketFromFile('shapes.data')
 newItems = getNewBucketItems()

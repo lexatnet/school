@@ -1,5 +1,5 @@
 from prompt_toolkit.shortcuts.utils import clear
-from shapeslib import analyseBucket, getNewBucketItems, printBucket, loadBucketFromFile, saveBucketItems
+from lib import analyseBucket, getNewBucketItems, printBucket, loadBucketFromFile, saveBucketItems
 
 from prompt_toolkit.shortcuts.dialogs import input_dialog
 
