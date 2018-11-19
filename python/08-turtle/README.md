@@ -124,6 +124,7 @@ end_fill()
 ### More drawing control
 
 reset() - устанавливаем черепаху в начало координат и стираем все что она нарисовала
+и сбрасываем все параметры черепашки на параметы по умолчанию
 
 clear() - стираем все что нарисовала черепаха
 
@@ -138,8 +139,6 @@ font – a triple (fontname, fontsize, fonttype)
 
 
 # Turtle state
-
-Visibility
 
 showturtle() | st() - показываем черепашку
 
