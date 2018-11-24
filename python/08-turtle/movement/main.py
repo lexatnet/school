@@ -6,3 +6,18 @@ from turtle import Turtle, Screen
 
 # создадим черепаху и поместим ее в переменную, это поможет нам управлять этой черепахой
 t = Turtle()
+screen = Screen()
+
+t.forward(60)
+t.left(60)
+t.forward(60)
+t.right(60)
+t.backward(60)
+t.goto(100,100)
+t.setx(20)
+t.sety(20)
+t.setheading(180)
+t.forward(60)
+t.home()
+
+screen.exitonclick()
