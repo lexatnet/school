@@ -15,11 +15,45 @@ screen = Screen()
 t.penup()
 # можно поменять размер и цвет пера
 
+shape = 'b.gif'
+screen.register_shape(shape)
+t.shape(shape)
 
 
-#t.circle(60, steps=6)
-t.color("blue")
-t.stamp()
-t.forward(60)
+# можно перемещать черепаху вперёд и назад
+t.forward(50)
+t2.backward(50)
 
-screen.exitonclick()
+# поворачивать ее на различные углы
+# и делать множество полезных интересных и полезных вещей
+
+
+# ознакомися с концепцией событийного програмирования
+
+def tf(th):
+    def f():
+        th.forward(10)
+    return f
+
+def tb(th):
+    def f():
+        th.backward(10)
+    return f
+
+def tr(th):
+    def f():
+        th.right(10)
+    return f
+
+def tl(th):
+    def f():
+        th.left(10)
+    return f
+
+
+screen.onkey(tf(t), 'Up')
+screen.onkey(tl(t), 'Left')
+screen.onkey(tr(t), 'Right')
+screen.onkey(tb(t), 'Down')
+screen.listen()
+input()
