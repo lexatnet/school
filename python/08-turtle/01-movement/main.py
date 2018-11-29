@@ -18,6 +18,7 @@ t.setx(20)
 t.sety(20)
 t.setheading(180)
 t.forward(60)
+t.speed(1)
 t.home()
 
 screen.exitonclick()
