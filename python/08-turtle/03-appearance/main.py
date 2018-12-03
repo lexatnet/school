@@ -31,6 +31,7 @@ for i in range(1, 4):
     t.right(60)
     t.fd(20)
     t.left(300)
+
 t.setheading(90)
 t.speed(1)
 t.fd(20)
