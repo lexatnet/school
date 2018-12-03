@@ -73,7 +73,9 @@ setheading()
 seth()
 ```
 устанавливаем напрвление
+
 | стандартный режим | logo mode   |
+|-------------------|-------------|
 | 0 - восток        | 0 - север   |
 | 90 - север        | 90 - восток |
 | 180 - запад       | 180 - юг    |
@@ -343,10 +345,10 @@ shape(name)
 resourced(rmode)
 ```
 возвращает или устанавливает режим масштабирования черепахи
-`rmode` – может принимать следующие значения “auto”, “user”, “noresize”
-`auto`: адаптирует размер черепахи в зависимости от размера пера.
-`user`: адаптирует размер черепахи в соответствии со значениями stretchfactor and outlinewidth (outline), которые устанавливаются функцией shapesize().
-`noresize`: no adaption of the turtle’s appearance takes place.
+`rmode` – может принимать следующие значения “auto”, “user”, “noresize”  
+`auto`: адаптирует размер черепахи в зависимости от размера пера.  
+`user`: адаптирует размер черепахи в соответствии со значениями stretchfactor and outlinewidth   (outline), которые устанавливаются функцией shapesize().  
+`noresize`: no adaption of the turtle’s appearance takes place.  
 
 ---
 ```python
