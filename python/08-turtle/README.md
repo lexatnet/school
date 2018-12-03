@@ -271,6 +271,7 @@ isdown()
 color()
 ```
 возвращает или устанавливаем цвет пера и цвет заливки
+
 [пример](02-drawing/main.py)
 
 ---
@@ -381,7 +382,8 @@ resourced(rmode)
 
 ---
 ```python
-shapesize(stretch_wid=None, stretch_len=None, outline=None) | turtlesize(stretch_wid=None, stretch_len=None, outline=None)
+shapesize(stretch_wid=None, stretch_len=None, outline=None)
+turtlesize(stretch_wid=None, stretch_len=None, outline=None)
 ```
 
 ---
