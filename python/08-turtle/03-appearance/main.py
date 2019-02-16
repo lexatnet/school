@@ -83,7 +83,5 @@ for turtle in turtles:
     new_turtle.stamp()
     new_turtle.forward(step*2)
     new_turtle.shearfactor(1)
-    
-
 
 screen.exitonclick()
