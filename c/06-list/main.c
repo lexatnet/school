@@ -38,7 +38,7 @@ int print_list(node_t * head ) {
 
 node_t * fill_list() {
     node_t * head = NULL;
-    node_t * tmp = NULL;
+    node_t * tmp = NULLnode_t;
     node_t * last = NULL;
     int x;
     char input[MAXINPUT] = "";
@@ -60,7 +60,7 @@ node_t * fill_list() {
             
         tmp = malloc(sizeof(node_t));
         if (tmp == NULL) {
-            return 1;
+            return head;
         }
         if(head == NULL) {
             head = tmp;
@@ -76,13 +76,21 @@ node_t * fill_list() {
 }
 
 int main() {
-    node_t * head = NULL;
+    node_t * head1 = NULL;
+    node_t * head2 = NULL;
     
-    head = fill_list();
+    head1 = fill_list();
     
-    if(head != NULL) {
+    head2 = fill_list();
+    
+    if(head1 != NULL) {
         printf("list contains:\n");
-        print_list(head);
+        print_list(head1);
+    }
+    
+    if(head2 != NULL) {
+        printf("list contains:\n");
+        print_list(head2);
     }
     
     return 0;
