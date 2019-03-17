@@ -27,6 +27,8 @@ import sys
 
 # Простая библиотека предоставляющая полезные функции
 # которые помогают манитулировать изображениями и событиями
+# она не входит в комплект стандартой поставки python
+# ее необходимо отдельно устанавливать с помощью утилиты pip
 import pygame
 
 # Инициализируем библиотеку pygame это устанавливает некоторые полезные внутренние переменные
@@ -57,7 +59,11 @@ black = 0, 0, 0
 screen = pygame.display.set_mode(size)
 
 # Загрузим изображение нашего мяча поместив объект в переменную ball
-ball = pygame.image.load("intro_ball.gif")
+import os
+file_path = os.path.realpath(__file__)
+dir_path = os.path.dirname(file_path)
+ball_image = os.path.join(dir_path, 'intro_ball.gif')
+ball = pygame.image.load(ball_image)
 
 # определим размеры изображения получив прямоугольник в который можно его вписать
 # далее будим оперировать именно этим прямоугольником

@@ -36,7 +36,11 @@ state = {
 
 # Действия выполняюшиеся один единственный раз переред запуском событийного цикла так же можно сгруппировать
 def init_state(state):
-  state['ball']['image'] = pygame.image.load(state['ball']['image_path'])
+  import os
+  file_path = os.path.realpath(__file__)
+  dir_path = os.path.dirname(file_path)
+  ball_image = os.path.join(dir_path, state['ball']['image_path'])
+  state['ball']['image'] = pygame.image.load(ball_image)
   state['ball']['rect'] = state['ball']['image'].get_rect()
   state['screen']['instance'] = pygame.display.set_mode(
     (

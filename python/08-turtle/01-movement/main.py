@@ -21,4 +21,22 @@ t.forward(60)
 t.speed(1)
 t.home()
 
+t.setheading(275)
+t.forward(123)
+
+t.setheading(180)
+t.forward(78)
+
+t.dot()
+t.setheading(50)
+t.forward(38)
+
+t.dot(20)
+t.setheading(135)
+t.forward(38)
+
+t.dot(10, 'red')
+t.setheading(180)
+t.forward(38)
+
 screen.exitonclick()
