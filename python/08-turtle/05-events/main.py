@@ -30,30 +30,34 @@ t2.backward(50)
 
 # ознакомися с концепцией событийного програмирования
 
-def tf(th):
+def tf(th,l):
     def f():
-        th.forward(10)
+        th.setheading(90)
+        th.forward(l)
     return f
 
-def tb(th):
+def tb(th, l):
     def f():
-        th.backward(10)
+        th.setheading(270)
+        th.forward(l)
     return f
 
-def tr(th):
+def tr(th, l):
     def f():
-        th.right(10)
+        th.setheading(0)
+        th.forward(l)
     return f
 
-def tl(th):
+def tl(th, l):
     def f():
-        th.left(10)
+        th.setheading(180)
+        th.forward(l)
     return f
 
 
-screen.onkey(tf(t), 'Up')
-screen.onkey(tl(t), 'Left')
-screen.onkey(tr(t), 'Right')
-screen.onkey(tb(t), 'Down')
+screen.onkey(tf(t, 20), 'Up')
+screen.onkey(tl(t, 20), 'Left')
+screen.onkey(tr(t, 20), 'Right')
+screen.onkey(tb(t, 20), 'Down')
 screen.listen()
 screen.exitonclick()
