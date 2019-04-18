@@ -765,7 +765,7 @@ exitonclick()
 ```
 устанавливает обработчиком события нажатия на кнопку мышы функцию bye()
 
-[пример](01-movement/main.py)
+[пример](01-movement/main.py)\
 [пример](03-appearance/main.py)
 
 ---
