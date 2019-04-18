@@ -5,12 +5,10 @@ screen.tracer(n=1000)
 
 width = 300
 height = 100
-border = 10
-
+border = 20
 
 def create_box_shape(shape_name, width, height, border):
   tmp = Turtle()
-  # tmp.speed(1)
   reverse_width  = height
   reverse_height = width
   big_rect = get_rect(tmp, reverse_width, reverse_height, 0)
@@ -39,8 +37,6 @@ def create_box_shape(shape_name, width, height, border):
   screen.register_shape(shape_name, p)
 
 def in_box(pos_x, pos_y, top_x, top_y, bottom_x, bottom_y):
-  print(pos_x, pos_y, top_x, top_y, bottom_x, bottom_y)
-  print((pos_x > top_x), (pos_x < bottom_x), (pos_y < top_y), (pos_y > bottom_y))
   if(pos_x > top_x) and (pos_x < bottom_x) and (pos_y < top_y) and (pos_y > bottom_y):
     return True
   return False
@@ -78,11 +74,8 @@ box.shape('111')
 def tu(th,l):
   def f():
     pos = th.position()
-    print(pos)
     next_pos = (pos[0], pos[1] + l)
-    print(next_pos)
     rect = get_rect(th, width, height, border)
-    print(rect)
     if (
         in_box(
           next_pos[0],
@@ -96,7 +89,7 @@ def tu(th,l):
       screen.tracer(n=1000)
       th.setheading(90)
       screen.tracer(n=1)
-      th.forward(l)
+      th.goto(next_pos[0], next_pos[1])
   return f
 
 def td(th, l):
@@ -117,7 +110,7 @@ def td(th, l):
       screen.tracer(n=1000)
       th.setheading(270)
       screen.tracer(n=1)
-      th.forward(l)
+      th.goto(next_pos[0], next_pos[1])
   return f
 
 def tr(th, l):
@@ -138,7 +131,7 @@ def tr(th, l):
       screen.tracer(n=1000)
       th.setheading(0)
       screen.tracer(n=1)
-      th.forward(l)
+      th.goto(next_pos[0], next_pos[1])
   return f
 
 def tl(th, l):
@@ -159,7 +152,7 @@ def tl(th, l):
       screen.tracer(n=1000)
       th.setheading(180)
       screen.tracer(n=1)
-      th.forward(l)
+      th.goto(next_pos[0], next_pos[1])
   return f
 
 
