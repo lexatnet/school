@@ -3,14 +3,14 @@ from engine import utils
 state = {
   'box':{
     'size':{
-      'width': 200,
-      'height': 200
+      'width': 400,
+      'height': 400
     }
   },
   'screen':{
     'size':{
-      'width': 300,
-      'height': 300
+      'width': 400,
+      'height': 400
     },
     'backgroud_color':(0, 0, 0)
   },
